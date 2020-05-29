@@ -1,0 +1,100 @@
+<div fxLayout="column">
+  <app-header [theme]="'light'" [variant]="'client'"></app-header>
+  <div fxLayout="column" class="container" fxLayoutGap="8px" style="margin-top: 32px">
+    <p class="section-heading">Next Session</p>
+    <div fxLayout fxLayoutGap="56px">
+      <div fxFlex="40">
+        <div class="session-card" fxLayout="column" fxLayoutAlign="space-between">
+          <div fxLayout="column">
+            <div fxLayout fxLayoutAlign="space-between center">
+              <p class="topic-heading">Topic: Career</p>
+              <button mat-button style="min-width: 36px; padding: 0 4px">
+                <mat-icon style="color: white">more_vert</mat-icon>
+              </button>
+            </div>
+            <p class="counsellor-name">With Laura</p>
+          </div>
+          <div fxLayout="column" fxLayoutGap="8px">
+            <p class="heading-starts-in">Starts in</p>
+            <div fxLayout fxLayoutAlign="space-between center">
+              <div fxFlex fxLayout fxLayoutAlign="space-around">
+                <div fxLayout="column" fxLayoutAlign="start center">
+                  <p class="remaining-time-number">1</p>
+                  <p class="remaining-time-unit">Day</p>
+                </div>
+                <div fxLayout="column" fxLayoutAlign="start center">
+                  <p class="remaining-time-number">2</p>
+                  <p class="remaining-time-unit">hours</p>
+                </div>
+                <div fxLayout="column" fxLayoutAlign="start center">
+                  <p class="remaining-time-number">55</p>
+                  <p class="remaining-time-unit">Minutes</p>
+                </div>
+              </div>
+              <div fxFlex="20"></div>
+              <button mat-raised-button [disabled]="true">Enter Session</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div fxFlex="60">
+        <div class="session-card" fxLayout fxLayoutAlign="space-around center" fxLayoutGap="18px">
+          <img src="../../../assets/images/support.svg" style="height: 130px">
+          <div fxLayout="column" fxLayoutAlign="space-around" style="height: 100%">
+            <p class="need-help">Need Help?</p>
+            <p class="help-text">Check out our FAQs or contact support</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="section-heading">Upcoming Sessions</p>
+    <table class="table-style" cellspacing="0">
+      <tr class="header-row">
+        <th>Topic</th>
+        <th>Counsellor</th>
+        <th>Session Timings</th>
+        <th></th>
+      </tr>
+      <tr class="data-row">
+        <td>Anxiety</td>
+        <td>Liz</td>
+        <td>18 May 6:00 PM - 6:45 PM</td>
+        <td>
+          <button mat-button>
+            <mat-icon>more_horiz</mat-icon>
+          </button>
+        </td>
+      </tr>
+      <tr class="data-row">
+        <td>Anxiety</td>
+        <td>Liz</td>
+        <td>18 May 6:00 PM - 6:45 PM</td>
+        <td>
+          <button mat-button>
+            <mat-icon>more_horiz</mat-icon>
+          </button>
+        </td>
+      </tr>
+      <tr class="data-row">
+        <td>Anxiety</td>
+        <td>Liz</td>
+        <td>18 May 6:00 PM - 6:45 PM</td>
+        <td>
+          <button mat-button>
+            <mat-icon>more_horiz</mat-icon>
+          </button>
+        </td>
+      </tr>
+      <tr class="data-row">
+        <td>Anxiety</td>
+        <td>Liz</td>
+        <td>18 May 6:00 PM - 6:45 PM</td>
+        <td>
+          <button mat-button>
+            <mat-icon>more_horiz</mat-icon>
+          </button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div fxFlex fxLayout fxLayoutAlign="start center" style="padding: 24px" *ngIf="fromMessage">
+  <div class="from-chat" fxLayout fxLayoutAlign="start center">
+    <p style="padding: 12px">{{ message.message }}</p>
+  </div>
+  <div fxFlex="40"></div>
+</div>
+
+<div fxFlex fxLayout fxLayoutAlign="end center" style="padding: 24px" *ngIf="!fromMessage">
+  <div fxFlex="40"></div>
+  <div class="to-chat" fxLayout fxLayoutAlign="start center">
+    <p style="padding: 12px">{{ message.message }}</p>
+  </div>
+</div>

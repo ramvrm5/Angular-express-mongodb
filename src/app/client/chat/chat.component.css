@@ -1,0 +1,137 @@
+.username {
+  font-size: 18px;
+  margin-bottom: 0;
+  margin-left: 24px;
+  color: white;
+  font-weight: bold;
+}
+
+.chat-header {
+  background: rgb(0, 180, 173);
+  border-radius: 32px;
+  height: 50px;
+}
+
+#message-container {
+  margin-top: 2px;
+  margin-bottom: 2px;
+  
+}
+
+.left {
+  float: left;
+  width: 250px;
+  padding: 8px 0px 8px 10px;
+  border-radius: 8px;
+  background: rgb(255,255,255);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.right {
+  float: right;
+  width: 250px;
+  padding: 8px 0px 8px 10px;
+  border-radius: 8px;
+  background: rgb(255,255,255);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#message {
+  background: rgb(0, 180, 173);
+  margin-top: 2px;
+}
+
+.chat-main {
+  min-height: calc(100vh - 136px);
+  border-radius: 32px;
+  background: rgb(222, 243, 241);
+}
+
+.from-chat {
+  height: 160px;
+  width: 360px;
+  border-radius: 12px 24px 24px 24px;
+  background: white;
+}
+
+.to-chat {
+  height: 160px;
+  width: 360px;
+  border-radius: 12px 24px 24px 24px;
+  background: rgb(0, 175, 170);
+}
+
+#session-container {
+  width: 320px;
+  padding: 10px;
+  overflow-y: auto;
+  box-shadow: 1px 1px 2px 2px #b6b6b6;
+  position: absolute;
+  left: 0;
+  top: 35%;
+  right: 0;
+  margin: auto;
+  height: 280px;
+}
+
+#accessCode {
+  margin-top: 10px;
+}
+
+.send-message {
+  bottom: 0;
+  background: rgb(0, 182, 175);
+  border-radius: 32px;
+}
+
+.mood-icon {
+  padding-left: 18px;
+  height: 32px;
+}
+
+.send-icon {
+  padding-right: 18px;
+  height: 32px;
+}
+
+:host ::ng-deep .mat-form-field-wrapper {
+  padding-bottom: 0 !important;
+  background: white;
+  border-radius: 32px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+:host ::ng-deep .mat-form-field-underline {
+  display: none;
+}
+
+:host ::ng-deep .mat-form-field-appearance-fill .mat-form-field-infix {
+  padding: 0.25em 0 0.75em 0.5em;
+}
+
+:host ::ng-deep .mat-form-field-infix {
+  border-top: 0;
+}
+
+:host ::ng-deep .mat-form-field {
+  font-size: 18px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .container, .container-sm, .container-md, .container-lg, .container-xl {
+    max-width: 1024px;
+  }
+}
+
+#chatContainer {
+  padding: 25px;
+  overflow-y: scroll; 
+  margin-bottom: 10px
+}
+
+.send-button {
+  text-align: left !important;
+}

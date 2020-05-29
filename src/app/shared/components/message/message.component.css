@@ -1,0 +1,13 @@
+.from-chat {
+  min-height: 36px;
+  min-width: 180px;
+  border-radius: 6px 12px 12px 12px;
+  background: white;
+}
+
+.to-chat {
+  min-height: 36px;
+  min-width: 180px;
+  border-radius: 6px 12px 12px 12px;
+  background: rgb(0, 175, 170);
+}

@@ -1,0 +1,173 @@
+.about-us {
+  margin-top: 56px;
+  font-size: 56px;
+  padding-bottom: 56px;
+}
+
+.background-yellow {
+  background: rgba(255, 246, 135, 0.5);
+  width: 540px;
+  height: 340px;
+  margin-left: 72px;
+  border-radius: 25px;
+}
+
+.venting-hub-title {
+  background: rgb(164, 220, 200);
+  width: 300px;
+  padding: 15px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.point-yellow {
+  background: #FFE0AC;
+  height: 176px;
+  width: 176px;
+  border-radius: 88px;
+  /* border: 2px dotted black; */
+}
+
+.number {
+  position: absolute;
+  font-size: 72px;
+}
+
+.review-title {
+  font-size: 56px;
+  font-weight: bold;
+}
+
+.review-image {
+  height: 156px;
+  width: 156px;
+  border-radius: 78px;
+  position: absolute;
+}
+
+.dotted-circle {
+  border: 2px dashed;
+  height: 180px;
+  width: 180px;
+  border-radius: 90px;
+}
+
+.background-review {
+  width: 1064px;
+  background: rgba(158, 203, 255, 0.1);
+  height: 280px;
+}
+
+.review {
+  font-size: 21px;
+}
+
+.review-name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.about-us-image {
+  height: 340px;
+  margin-top: -50px;
+  position: absolute
+}
+
+.heading {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.description {
+  font-size: 32px;
+}
+
+@media only screen and (max-width: 600px) {
+  .about-us {
+    margin-top: 24px;
+    font-size: 36px;
+    font-weight: bold;
+  }
+
+  .about-us-image {
+    height: 174px;
+    margin-top: 0;
+  }
+
+  .background-yellow {
+    background: rgba(255, 246, 135, 0.5);
+    width: 240px;
+    height: 200px;
+    margin-left: 70px;
+    margin-top: 80px;
+    border-radius: 18px;
+  }
+
+  .venting-hub-title {
+    background: rgb(164, 220, 200);
+    width: 200px;
+    padding: 12px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+
+  .review-title {
+    font-size: 36px;
+    font-weight: bold;
+  }
+
+  .review-image {
+    height: 156px;
+    width: 156px;
+    border-radius: 78px;
+    position: absolute;
+  }
+
+  .dotted-circle {
+    border: 2px dashed;
+    height: 136px;
+    width: 136px;
+    border-radius: 68px;
+  }
+
+  .background-review {
+    width: 300px;
+    background: rgba(158, 203, 255, 0.1);
+    height: 580px;
+  }
+
+  .review {
+    font-size: 18px;
+  }
+
+  .review-name {
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  .point-yellow {
+    background: #FFE0AC;
+    height: 64px;
+    width: 64px;
+    border-radius: 32px;
+  }
+
+  .number {
+    position: absolute;
+    font-size: 32px;
+  }
+
+  .heading {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .description {
+    font-size: 21px;
+  }
+
+  .journey-description {
+    font-size: 15px;
+  }
+}

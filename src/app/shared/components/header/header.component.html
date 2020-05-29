@@ -1,0 +1,123 @@
+<div fxLayout *ngIf="theme === 'transparent'" fxLayoutAlign="space-between center">
+  <img routerLink="/" src="../../../../assets/icons/header-logo.png" alt="header-logo" class="header-logo">
+  <div fxLayout fxLayoutAlign="start center" fxLayoutGap="128px" *ngIf="!isMobile && variant == 'default'">
+    <div fxLayout fxLayoutGap="24px">
+      <button mat-button class="header-link" routerLink="/home" routerLinkActive="header-link-active">HOME</button>
+      <button mat-button class="header-link" routerLink="/services"
+        routerLinkActive="header-link-active">SERVICES</button>
+      <button mat-button class="header-link" routerLink="/about-us" routerLinkActive="header-link-active">ABOUT
+        US</button>
+    </div>
+    <div fxLayout fxLayoutGap="15px" style="padding-right: 15px">
+      <div><img src="../../../../assets/images/beta.png" alt="beta" class="beta-logo"></div>
+    </div>
+  </div>
+  <div fxLayout fxLayoutAlign="start center" fxLayoutGap="128px" *ngIf="!isMobile && variant == 'client'">
+    <div fxLayout fxLayoutGap="24px">
+      <button mat-button class="header-link" routerLink="/home" routerLinkActive="header-link-active">HOME</button>
+      <button mat-button class="header-link" routerLink="/services"
+        routerLinkActive="header-link-active">SERVICES</button>
+      <button mat-button class="header-link" routerLink="/client/my-bookings" routerLinkActive="header-link-active"
+        *ngIf="isLoggedIn">MY BOOKINGS</button>
+      <button mat-button class="header-link" routerLink="/about-us" routerLinkActive="header-link-active">ABOUT
+        US</button>
+      <div><img src="../../../../assets/images/beta.png" alt="beta" class="beta-logo"></div>
+    </div>
+    <div fxLayout fxLayoutGap="15px" style="padding-right: 15px">
+    </div>
+  </div>
+  <div fxLayout fxLayoutAlign="start center" *ngIf="isMobile">
+    <img src="../../../../assets/icons/menu-white.svg" height="24" class="menu-icon" (click)="openFooter()"
+      *ngIf="theme == 'transparent'; else menuIconAlternate">
+    <ng-template #menuIconAlternate>
+      <img src="../../../../assets/icons/menu.svg" height="24" class="menu-icon" (click)="openFooter()">
+    </ng-template>
+  </div>
+</div>
+
+<div fxLayout *ngIf="theme === 'light'" fxLayoutAlign="space-between center">
+  <img routerLink="/" src="../../../../assets/icons/logo-dark.png" alt="header-logo" class="header-logo">
+  <div fxLayout fxLayoutAlign="start center" fxLayoutGap="128px" *ngIf="!isMobile && variant == 'default'">
+    <div fxLayout fxLayoutGap="24px">
+      <button mat-button class="header-link-light" routerLink="/home" routerLinkActive="header-link-active">HOME</button>
+      <button mat-button class="header-link-light" routerLink="/services"
+        routerLinkActive="header-link-light-active">SERVICES</button>
+      <button mat-button class="header-link-light" routerLink="/about-us" routerLinkActive="header-link-light-active">ABOUT
+        US</button>
+    </div>
+    <div fxLayout fxLayoutGap="15px" style="padding-right: 15px">
+      <div><img src="../../../../assets/images/beta.png" alt="beta" class="beta-logo"></div>
+    </div>
+  </div>
+  
+  <div fxLayout fxLayoutAlign="start center" fxLayoutGap="128px" *ngIf="!isMobile && variant == 'client'">
+    <div fxLayout fxLayoutGap="24px">
+      <button mat-button class="header-link-light" routerLink="/home"
+        routerLinkActive="header-link-light-active">HOME</button>
+      <button mat-button class="header-link-light" routerLink="/services"
+        routerLinkActive="header-link-light-active">SERVICES</button>
+      <button mat-button class="header-link-light" routerLink="/client/my-bookings"
+        routerLinkActive="header-link-light-active" *ngIf="isLoggedIn">MY BOOKINGS</button>
+      <button mat-button class="header-link-light" routerLink="/about-us"
+        routerLinkActive="header-link-light-active">ABOUT US</button>
+    </div>
+    <div fxLayout fxLayoutGap="15px" style="padding-right: 15px">
+      <div><img src="../../../../assets/images/beta.png" alt="beta" class="beta-logo"></div>
+    </div>
+  </div>
+  <div fxLayout fxLayoutAlign="start center" fxLayoutGap="128px" *ngIf="!isMobile && variant == 'counsellor'">
+    <div fxLayout fxLayoutGap="24px">
+      <button mat-button class="header-link-light" routerLink="/counsellor/dashboard"
+        routerLinkActive="header-link-light-active">DASHBOARD</button>
+      <button mat-button class="header-link-light" routerLink="/counsellor/schedule"
+        routerLinkActive="header-link-light-active">SCHEDULE</button>
+    </div>
+    <div fxLayout fxLayoutGap="15px" style="padding-right: 15px">
+    </div>
+  </div>
+  <div fxLayout fxLayoutAlign="start center" *ngIf="isMobile">
+    <img src="../../../../assets/icons/menu.svg" height="24" class="menu-icon" (click)="openFooter()">
+  </div>
+</div>
+
+<div #navbar id="nav" class="overlay">
+  <!-- Overlay content -->
+  <div class="overlay-content" fxLayoutGap="12px" fxLayout="column">
+    <!-- Button to close the overlay navigation -->
+    <div fxLayout fxLayoutAlign="end">
+      <a class="closebtn" (click)="closeFooter()">&times;</a>
+    </div>
+    <div fxLayout="column" *ngIf="variant === 'default'">
+      <button mat-button class="mobile-nav-link" routerLink="/home"
+        routerLinkActive="mobile-nav-link-active">HOME</button>
+      <button mat-button class="mobile-nav-link" routerLink="/services"
+        routerLinkActive="mobile-nav-link-active">SERVICES</button>
+      <button mat-button class="mobile-nav-link" routerLink="/client/my-bookings"
+        routerLinkActive="mobile-nav-link-active" *ngIf="isLoggedIn">MY BOOKINGS</button>
+      <button mat-button class="mobile-nav-link" routerLink="/about-us" routerLinkActive="mobile-nav-link-active">ABOUT
+        US</button>
+    </div>
+    <div fxLayout="column" *ngIf="variant === 'client'">
+      <button mat-button class="mobile-nav-link" routerLink="/home"
+        routerLinkActive="mobile-nav-link-active">HOME</button>
+      <button mat-button class="mobile-nav-link" routerLink="/services"
+        routerLinkActive="mobile-nav-link-active">SERVICES</button>
+      <button mat-button class="mobile-nav-link" routerLink="/client/my-bookings"
+        routerLinkActive="mobile-nav-link-active" *ngIf="isLoggedIn">MY BOOKINGS</button>
+      <button mat-button class="mobile-nav-link" routerLink="/about-us" routerLinkActive="mobile-nav-link-active">ABOUT
+        US</button>
+    </div>
+    <div fxLayout="column" *ngIf="variant === 'counsellor'">
+      <button mat-button class="mobile-nav-link" routerLink="/counsellor/dashboard"
+        routerLinkActive="mobile-nav-link-active">DASHBOARD</button>
+      <button mat-button class="mobile-nav-link" routerLink="/counsellor/schedule"
+        routerLinkActive="mobile-nav-link-active">SCHEDULE</button>
+    </div>
+    <div fxFlex></div>
+    <div fxLayout="column" fxLayoutGap="8px" style="padding-bottom: 18px">
+    </div>
+    <div fxLayout="column" fxLayoutGap="8px" style="padding-bottom: 18px">
+    </div>
+  </div>
+</div>
+<ngx-spinner type="ball-pulse-sync" size="medium" color="#4FBBBC"></ngx-spinner>

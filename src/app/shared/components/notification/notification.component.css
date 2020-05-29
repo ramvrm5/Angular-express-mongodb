@@ -1,0 +1,26 @@
+.pink-divider {
+  border-right-color: #4FBBBC;
+  border-right-width: 12px !important;
+  height: 100%;
+}
+
+.close-icon:hover {
+  cursor: pointer;
+}
+
+.hover:hover {
+  cursor: pointer;
+}
+
+.message {
+  padding-left: 16px;
+  line-height: 1.5;
+}
+
+.message:hover {
+  text-decoration: underline;
+}
+
+.button-pink {
+  color: #4FBBBC;
+}

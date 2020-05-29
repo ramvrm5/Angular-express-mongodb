@@ -1,0 +1,145 @@
+.header {
+  height: 100px;
+}
+
+.header-light {
+  background: white;
+  height: 10px;
+}
+
+.header-link-light {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 14px;
+}
+
+.beta-logo {
+  height: 40px;
+  width: 50px;
+  position: absolute;
+  z-index: 45;
+  z-index: 615px;
+  right: -35px;
+  margin-right: 52px;
+  margin-top: -20px;
+}
+
+
+.header-logo {
+  margin-top: 24px;
+  padding-left: 24px;
+  z-index: 1;
+  height: 70px;
+  margin-bottom: 10px;
+}
+
+.header-logo:focus {
+  outline: none;
+}
+
+.header-link-active {
+  color: white !important;
+  font-size: 14px;
+  z-index: 1;
+}
+
+.header-link-light-active {
+  color: black;
+  font-size: 14px;
+}
+
+.header-link {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 14px;
+  z-index: 1;
+}
+
+.header-link:hover {
+  cursor: pointer;
+}
+
+.button-green {
+  height: 40px;
+  background: #4FBBBC;
+  color: white;
+  font-size: 18px;
+  z-index: 1;
+}
+
+.button-green-light {
+  height: 40px;
+  background: #4FBBBC;
+  color: black;
+  font-size: 18px;
+  z-index: 1;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  background-color: #F8F7F7;
+  overflow-x: hidden;
+  transition: 0.75s;
+}
+
+.closebtn {
+  z-index: 1;
+}
+
+@media only screen and (max-width: 600px) {
+  .header-logo {
+    padding-left: 12px;
+    z-index: 1;
+    height: 50px;
+  }
+
+  .menu-icon {
+    padding-right: 18px;
+    z-index: 1;
+  }
+
+  .menu-icon:hover {
+    cursor: pointer;
+  }
+
+  .overlay-content {
+    /* position: relative;
+    top: 10%; */
+    height: 100%;
+    width: 100%;
+  }
+
+
+  .overlay .closebtn {
+    float: right;
+    padding: 8px 12px;
+    font-size: 48px;
+  }
+
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 12px;
+      right: 35px;
+    }
+  }
+
+  .mobile-nav-link {
+    width: 250px;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  .button-green-light {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .mobile-nav-link-active {
+    color: black;
+  }
+}

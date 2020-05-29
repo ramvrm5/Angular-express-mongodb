@@ -1,0 +1,186 @@
+.services-illustration {
+  width: 100%;
+  margin: 18px;
+}
+
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media only screen and (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+.section-heading {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.section-description {
+  font-size: 32px;
+}
+
+.heading-background {
+  height: 90px;
+  width: 100%;
+  background: linear-gradient(to right, rgb(70, 196, 193), white);
+  border-radius: 48px;
+}
+
+.plans-title {
+  font-size: 48px;
+  font-weight: bold;
+  padding-left: 48px;
+  padding-right: 48px;
+}
+
+.pay-text {
+  color: rgb(0, 183, 179);
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.session-card {
+  background: linear-gradient(to top right, white, rgb(1, 182, 175));
+  height: 450px;
+  border-radius: 40px;
+  padding: 32px 48px;
+  min-height: 347px;
+  /* width: 45%; */
+  width: 45%
+}
+
+.subscription-card {
+  background: linear-gradient(to top right, rgb(85, 100, 93), rgb(0, 176, 170));
+  height: 500px;
+  border-radius: 64px;
+  padding: 48px 32px;
+  min-height: 412px;
+}
+
+:host ::ng-deep .mat-raised-button {
+  line-height: 24px !important;
+}
+
+.session-heading {
+  font-size: 48px;
+}
+
+.session-pricing {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.session-card-description {
+  font-size: 15px;
+}
+
+.book-now-button {
+  width: 200px;
+  height: 56px;
+  border-radius: 50px;
+  color: white;
+  background: rgb(92, 96, 89);
+  font-size: 32px;
+}
+
+.subscription-name {
+  font-size: 28px;
+  color: white;
+}
+
+.subscription-pricing {
+  font-size: 32px;
+  color: white;
+  font-weight: bold;
+}
+
+.subscription-description {
+  font-size: 15px;
+  color: white;
+  font-weight: bold;
+}
+
+.subscription-button {
+  width: 136px;
+  height: 40px;
+  font-size: 21px;
+  color: white;
+  background: rgb(116, 207, 216);
+  border-radius: 20px;
+}
+
+.coming-soon-text {
+  font-size: 76px;
+  font-weight: bold;
+}
+
+.overlay-coming-soon {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(243, 250, 247, 0.75);
+}
+@media only screen and (max-width: 600px) {
+  .section-heading {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .session-card {
+    width:100%;
+  }
+
+  .section-description {
+    font-size: 18px;
+  }
+
+  .heading-background {
+    height: 60px;
+    background: linear-gradient(to right, rgb(70, 196, 193), white);
+    border-radius: 15px;
+  }
+
+  .plans-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 !important;
+  }
+
+  .session-card {
+    background: linear-gradient(to top right, white, rgb(1, 182, 175));
+    height: 360px;
+    border-radius: 40px;
+    padding: 32px;
+    flex: 0.5
+  }
+
+
+  :host ::ng-deep .mat-raised-button {
+    line-height: 18px !important;
+  }
+
+  .session-heading {
+    font-size: 24px;
+  }
+
+  .session-pricing {
+    font-size: 36px;
+    font-weight: bold;
+  }
+
+  .session-card-description {
+    font-size: 18px;
+  }
+
+  .book-now-button {
+    width: 120px;
+    height: 32px;
+    border-radius: 20px;
+    color: white;
+    background: rgb(92, 96, 89);
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,10 @@
+.footer {
+  min-height: 124px;
+  background: #4FBBBC;
+  color: white;
+}
+
+.hover:hover {
+  cursor: pointer;
+  opacity: 90%;
+}

@@ -1,0 +1,75 @@
+.session-card {
+  height: 264px;
+  background: #4FBBBC;
+  border-radius: 15px;
+  padding: 18px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 2px 4px 0;
+}
+
+.section-heading {
+  font-size: 24px;
+  color: black;
+  font-weight: lighter;
+  margin-top: 16px;
+}
+
+.topic-heading {
+  font-size: 32px;
+  color: white;
+  font-weight: bold;
+}
+
+.counsellor-name {
+  font-size: 21px;
+  font-weight: lighter;
+  color: white;
+}
+
+.heading-starts-in {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+.remaining-time-number {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+.remaining-time-unit {
+  font-size: 12px;
+  font-weight: lighter;
+  color: white;
+}
+
+.need-help {
+  font-size: 32px;
+  font-weight: lighter;
+  color: white;
+}
+
+.help-text {
+  font-size: 18px;
+  color: white;
+  font-weight: lighter;
+}
+
+.table-style {
+  text-align: center;
+  width: 100%;
+}
+
+.header-row {
+  height: 60px;
+  border-radius: 5px;
+  background: rgba(90, 255, 218, 0.35);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.data-row {
+  height: 60px;
+  font-size: 24px;
+  font-weight: lighter;
+}

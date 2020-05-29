@@ -1,0 +1,75 @@
+<div fxLayout="column" style="min-height: 100%">
+  <app-header [variant]="variant"></app-header>
+  <div fxLayout="column" style="min-height: 100%;">
+    <div class="background-image"></div>
+    <div class="welcome-text" fxLayout="column" fxLayoutGap="18px" fxLayoutAlign="center center">
+      <span class="title-text">Welcome to venting hub</span>
+      <span class="description">Become a better stronger you</span>
+      <span class="description">The Power of Positive Venting: Releasing the pain of the past & looking forward to the future.</span>
+      <button mat-raised-button class="button-green" (click)="onBookNowClick()">Book Now</button>
+    </div>
+  </div>
+  <div fxLayout="column" fxLayoutAlign="center end" style="min-height: 100vh; width:100%">
+    <div class="background-rectangle"></div>
+    <div fxLayout fxLayout.xs="column" fxLayoutGap="12px" style="position: absolute;min-height: 400px;">
+      <div fxFlex fxLayout="column" fxLayoutAlign="center end" fxLayoutAlign.xs="center center">
+        <img src="../../../assets/images/counselling-image-1.png" class="counselling-image">
+      </div>
+      <div fxFlex fxLayout="column" fxLayoutAlign="space-around" fxLayoutAlign.xs="space-around" fxLayoutGap="48px" fxLayoutGap.xs="24px" class="greetings">
+        <div fxLayout="column" fxLayoutGap="15px">
+          <p class="greetings-text">Greetings,</p>
+          <p class="section-title-text">At Venting Hub,</p>
+        </div>
+        <p class="section-description">You can learn the ability to perceive the world
+          in new ways, to find hidden patterns, to make
+          connections between seemingly unrelated
+          phenomena, and to generate great solutions. </p>
+      </div>
+    </div>
+  </div>
+  <div fxLayout="column" fxLayoutGap="21px" class="container" style="padding-bottom: 128px;">
+    <div fxLayout fxLayoutAlign="start center">
+      <img src="../../../assets/images/shape-1.svg" class="heading-decor">
+      <p class="section-three-title">How we help?</p>
+    </div>
+    <div fxLayout fxLayout.xs="column" fxLayoutAlign="space-between center" fxLayoutGap="120px" fxLayoutGap.xs="48px" style="padding: 18px">
+      <div id="home-introduction" fxFlex fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="36px" fxFlexOrder="1" fxFlexOrder.xs="2" >
+        <div fxLayout="column" fxLayoutGap="8px" style="min-height: 188px;">
+          <div fxLayout fxLayoutAlign="start center">
+            <img src="../../../assets/images/Oval.png" class="subheading-decor" height="50">
+            <p class="section-three-heading">Obstacles</p>
+          </div>
+          <p class="section-three-description">We all have places in our life where we
+            are blocked. Working together, we will
+            identify those blocks and find ways for
+            you to overcome them.
+          </p>
+        </div>
+        <div fxLayout="column" style="min-height: 188px;">
+          <div fxLayout fxLayoutAlign="start center" >
+            <img src="../../../assets/images/Oval.png" class="subheading-decor" height="50">
+            <p class="section-three-heading">Be your best self</p>
+          </div>
+          <p class="section-three-description">Life is full of opportunities, and it is Our
+            job to help you figure out which
+            opportunities to take advantage of in
+            order to live the life you want. </p>
+        </div>
+        <div fxLayout="column" style="min-height: 188px;">
+          <div fxLayout fxLayoutAlign="start center">
+            <img src="../../../assets/images/Oval.png" class="subheading-decor" height="50">
+            <p class="section-three-heading">Live your dreams</p>
+          </div>
+          <p class="section-three-description">When you choose to live a dream, you
+            need a plan to make it come true. Once
+            you have a plan, a coach will help you
+            stick to it and get around any obstacles.</p>
+        </div>
+      </div>
+      <div fxLayout="column" fxLayoutAlign="start center" fxFlexOrder="2" fxFlexOrder.xs="1" style="padding: 32px;">
+        <div class="user-online-image"></div>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>

@@ -1,0 +1,48 @@
+<div fxLayout="column">
+  <app-header [theme]="'light'" [variant]="'client'"></app-header>
+  <div fxLayout="column" class="container">
+    <div fxLayout class="chat-header" fxLayoutAlign="start center">
+      <div fxLayout fxLayoutAlign="center center" style="height: 40px; width: 40px;background: white; margin-left: 8px; border-radius: 24px">
+        <img src="../../../assets/icons/chat-header.png" height="24" style="position: absolute;">
+      </div>
+      <p class="username">{{ client ? client : 'Client'}}</p>
+    </div>
+    <div fxFlex>
+      <div fxLayout="column" fxLayoutAlign="space-between" class="chat-main">
+        <div fxFlex fxLayout="column" id="chatContainer">
+            <!-- <app-message *ngFor="let message of messageList" [fromMessage]="message?.to_user === currentUser.id" [message]="message"></app-message> -->
+          <div *ngFor="let message of messageList">
+            <div [ngClass]="message.id === user.id ? 'right' : 'left'" > {{message.message}} </div>
+          </div>
+          </div>
+        <div fxLayout fxLayoutGap="12px" class="send-message" fxLayoutAlign="start center">
+          <img src="../../../assets/icons/mood.svg" class="mood-icon">
+          <mat-form-field fxFlex appearance="fill">
+            <input matInput placeholder="Enter a message" [(ngModel)]="user.message" (keyup)="senMessageOnEnter($event)">
+          </mat-form-field>
+          <button mat-button [disabled]="!user.message" (click)="sendMessage()" class="send-button">
+            <mat-icon style="color: white">send</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div id="session-container" *ngIf="showSession && !user.room">
+  <p style="height: 60px">
+    Active Sessions
+  </p>
+  <div *ngFor="let session of sessions">
+    <p style="font-size: 48px;">{{ session}}</p>
+    <div>
+
+      <mat-form-field id="accessCode" >
+        <input matInput placeholder="Enter Access Code"  [(ngModel)]="accessCode">
+      </mat-form-field>
+      <button mat-raised-button (click)="joinSession()"> Join Session</button>
+    </div>
+  </div>
+</div>

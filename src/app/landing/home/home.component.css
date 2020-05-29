@@ -1,0 +1,209 @@
+.background-image {
+  background-image: url("../../../assets/images/background-home.jpeg");
+  filter: brightness(45%) contrast(95%);
+  margin-top: -130px;
+  margin-left: -5px;
+  margin-right: -5px;
+  height: calc(100vh + 30px);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.welcome-text {
+  margin-top: -100px;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+}
+
+.title-text {
+  font-size: 60px;
+  color: white;
+  font-weight: bold;
+}
+
+.description {
+  font-size: 32px;
+  color: white;
+}
+
+.button-green {
+  height: 60px;
+  width: 180px;
+  border-radius: 5px;
+  color: white;
+  background: #4FBBBC;
+  font-size: 24px;
+}
+
+.counselling-image {
+  height: 50vh;
+  object-position: center;
+  border-radius: 15px;
+  z-index: 1;
+}
+
+.greetings-text {
+  font-size: 24px;
+}
+
+.section-title-text {
+  font-size: 52px;
+}
+
+.section-description {
+  font-size: 24px;
+}
+
+.background-rectangle {
+  width: 65%;
+  height: 80vh;
+  background: rgba(63, 224, 226, 0.25) no-repeat center;
+  z-index: -1;
+}
+
+.user-online-image {
+  height: 700px;
+  width: 500px;
+  background: url("../../../assets/images/homepage-illustration-2.jpg") 20% no-repeat;
+  box-shadow: rgba(0, 0, 0, 0.25) 35px 35px 30px 0;
+  background-size: cover;
+  border-radius: 20px;
+}
+
+.section-three-title {
+  font-size: 60px;
+  color: #4FBBBC;
+  position: absolute;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.section-three-heading {
+  font-size: 24px;
+  color: black;
+  font-weight: bold;
+  position: absolute;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.section-three-description {
+  font-size: 21px;
+  color: black;
+}
+
+.heading-decor {
+  margin-left: -75px;
+  height: 150px;
+}
+
+.subheading-decor {
+  margin-left: -50px;
+  height: 50px;
+}
+
+.greetings {
+  padding-left: 60px; padding-right: 60px
+}
+
+#home-introduction {
+  min-height: 636px;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .greetings {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .title-text {
+    font-size: 36px;
+    color: white;
+    font-weight: bold;
+  }
+
+  .description {
+    font-size: 21px;
+    color: white;
+  }
+
+  .button-green {
+    height: 50px;
+    width: 150px;
+    color: white;
+    background: #4FBBBC;
+    font-size: 18px;
+  }
+
+  .counselling-image {
+    border-radius: 15px;
+    width: auto;
+    height: auto;
+    max-width: 320px;
+  }
+
+  .background-rectangle {
+    width: 100%;
+    height: 50vh;
+    margin-top: 50vh;
+    background: rgba(63, 224, 226, 0.25) no-repeat center;
+    z-index: -1;
+  }
+
+  .greetings-text {
+    font-size: 15px;
+    padding: 0 16px;
+  }
+
+  .section-title-text {
+    font-size: 24px;
+    padding: 0 16px;
+  }
+
+  .section-description {
+    font-size: 15px;
+    padding: 0 16px;
+  }
+
+  .user-online-image {
+    height: 500px;
+    width: 300px;
+    background: url("../../../assets/images/homepage-illustration-2.jpg") center no-repeat;
+    box-shadow: rgba(0, 0, 0, 0.25) 18px 18px 15px 0;
+    background-size: cover;
+    border-radius: 15px;
+  }
+
+  .section-three-title {
+    font-size: 32px;
+    padding-left: 21px;
+    color: #4FBBBC;
+  }
+
+  .section-three-heading {
+    padding-left: 36px;
+    font-size: 21px;
+    color: black;
+    font-weight: bold;
+  }
+
+  .section-three-description {
+    padding-left: 36px;
+    font-size: 18px;
+    color: black;
+  }
+
+  .heading-decor {
+    padding-left: 48px;
+    height: 82px;
+  }
+
+  .subheading-decor {
+    padding-left: 36px;
+    height: 48px;
+  }
+}

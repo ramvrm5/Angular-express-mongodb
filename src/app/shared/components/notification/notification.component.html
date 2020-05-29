@@ -1,0 +1,14 @@
+<div fxLayout style="width: 400px; background: white; color: black" (click)="takeAction()" [class]="data.action ? 'hover': ''" [ngStyle]="{ 'height': data.height }">
+  <mat-divider vertical class="pink-divider"></mat-divider>
+  <div fxLayout="column" style="height: 100%">
+    <div fxFlex fxLayout fxLayoutGap="18px" fxLayoutAlign="space-between start" style="height: 100%; width: 388px; padding: 8px 8px 8px 0">
+      <div style="height: 100%" fxLayout="column" fxLayoutAlign="center">
+        <p style="font-size: 14px; font-weight: 400" class="message">{{ data.message }}</p>
+      </div>
+      <mat-icon class="close-icon" (click)="close()">close</mat-icon>
+    </div>
+    <div fxLayout fxLayoutAlign="end center" *ngIf="data.additional_action">
+      <button mat-button class="button-pink" (click)="goToAction(data.additional_action.redirect_uri)">{{ data.additional_action.message }}</button>
+    </div>
+  </div>
+</div>

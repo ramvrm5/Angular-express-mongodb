@@ -1,0 +1,104 @@
+<div fxLayout="column">
+  <app-header [theme]="'light'" [variant]="variant"></app-header>
+  <div fxLayout="column" class="container" style="min-height: 616px;">
+    <div fxLayout fxLayout.xs="column" fxLayoutAlign="space-between" fxLayoutGap="90px" fxLayoutGap.xs="36px" fxLayoutAlign.xs="space-around" style="margin-top: 56px; padding: 32px;">
+      <div fxFlex fxLayout="column" fxLayoutGap="56px" fxLayoutGap.xs="12px" style="padding: 18px">
+        <p class="section-heading">Affordable Pricing</p>
+        <p class="section-description">We offer a variety of plans Including custom plans so that you can be as flexible as you desire.</p>
+      </div>
+      <div fxFlex="5"></div>
+      <div fxFlex fxLayout="column" fxLayoutAlign="start center" style="min-height: 207px;">
+        <img src="../../../assets/images/services.svg" class="services-illustration">
+      </div>
+    </div>
+  </div>
+  <div fxLayout="column" class="container-fluid">
+    <div fxLayout class="heading-background" fxLayoutAlign="center center" style="width: 100%">
+      <p class="plans-title">See which plan is right for you</p>
+    </div>
+    <div fxLayout="column" class="container" fxLayoutGap="48px" style="width: 100%; padding: 60px">
+    <p class="pay-text">Pay as you go</p>
+    <div fxLayout fxLayoutAlign="space-between" fxLayout.xs="column" fxLayoutGap="108px" style="padding-bottom: 56px">
+      <div fxLayout="column" fxLayoutAlign="space-between" class="session-card">
+        <div fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="18px">
+          <p class="session-heading">Single Session</p>
+          <p class="session-pricing">$39</p>
+        </div>
+        <div fxLayout="column" fxLayoutAlign="end center" fxLayoutGap="36px">
+          <div fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="8px">
+            <p class="session-card-description">Customise date & time</p>
+            <p class="session-card-description">Duration: 45 minutes</p>
+          </div>
+          <button mat-raised-button class="book-now-button" (click)="bookSession()">Book Now</button>
+        </div>
+      </div>
+      <!-- <div fxLayout="column" fxLayoutAlign="space-between" class="session-card">
+        <div fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="18px">
+          <p class="session-heading">Single Session</p>
+          <p class="session-pricing">$39</p>
+        </div>
+        <div fxLayout="column" fxLayoutAlign="end center" fxLayoutGap="36px">
+          <div fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="8px">
+            <p class="session-card-description">Customise date & time</p>
+            <p class="session-card-description">Duration: 45 minutes</p>
+          </div>
+          <button mat-raised-button class="book-now-button" (click)="bookSession()">Book Now</button>
+        </div>
+      </div>
+       -->
+    </div>
+      <div fxLayout="column" fxLayoutGap="32px" style="position: relative">
+        <div fxLayout fxLayoutAlign="center center" class="overlay-coming-soon">
+          <p class="coming-soon-text">Coming Soon!</p>
+        </div>
+        <mat-divider style="width: 100%"></mat-divider>
+        <div fxLayout="column" fxLayoutGap="36px">
+          <p class="pay-text">Membership</p>
+          <div fxLayout fxLayoutAlign="space-between" fxLayout.xs="column" fxLayoutGap="90px">
+            <div fxFlex fxLayout="column" fxLayoutAlign="space-between" fxLayoutGap="21px" class="subscription-card">
+              <div fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="36px">
+                <p class="subscription-name">Basic Subscription</p>
+                <p class="subscription-pricing">$149 / mo</p>
+              </div>
+              <div fxLayout="column" fxLayoutAlign="start center">
+                <p class="subscription-description">1 session per week</p>
+                <p class="subscription-description">4 sessions per month</p>
+              </div>
+              <div fxLayout="column" fxLayoutAlign="start center">
+                <button mat-raised-button class="subscription-button">Subscribe</button>
+              </div>
+            </div>
+            <div fxFlex fxLayout="column" fxLayoutAlign="space-between" fxLayoutGap="21px" class="subscription-card">
+              <div fxLayout="column" fxLayoutGap="36px" fxLayoutAlign="start center">
+                <p class="subscription-name">Premium Subscription</p>
+                <p class="subscription-pricing">$300 / mo</p>
+              </div>
+              <div fxLayout="column" fxLayoutAlign="start center">
+                <p class="subscription-description">2 session per week</p>
+                <p class="subscription-description">8 sessions per month</p>
+              </div>
+              <div fxLayout="column" fxLayoutAlign="start center">
+                <button mat-raised-button class="subscription-button">Subscribe</button>
+              </div>
+            </div>
+            <div fxFlex fxLayout="column" fxLayoutAlign="space-between" fxLayoutGap="21px" class="subscription-card">
+              <div fxLayout="column" fxLayoutGap="36px" fxLayoutAlign="start center">
+                <p class="subscription-name">Custom Subscription</p>
+                <p class="subscription-pricing">$TBD</p>
+              </div>
+              <div fxLayout="column" fxLayoutAlign="start center">
+                <p class="subscription-description">Email us at</p>
+                <p class="subscription-description">ventinghub1@gmail.com</p>
+              </div>
+              <div fxLayout="column" fxLayoutAlign="space-between center">
+                <button mat-raised-button class="subscription-button">Email</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br>
+  <app-footer></app-footer>
+</div>
