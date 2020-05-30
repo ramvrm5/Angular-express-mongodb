@@ -50,6 +50,7 @@ export class ChatComponent implements OnInit{
   sendMessage() {
       this.socketService.sendMessage(this.user);
       this.user.message = '';
+      this.scroll()
   }
 
   getMessages() {
@@ -60,7 +61,13 @@ export class ChatComponent implements OnInit{
           this.client = messages.name
         }
         this.messageList.push(messages);
-        document.getElementById('chatContainer').scrollTop = document.getElementById('chatContainer').scrollHeight;
+        this.scroll();
       });
+  }
+
+  scroll() {
+    setTimeout(() => {
+      document.getElementById('chatContainer').scrollTop = document.getElementById('chatContainer').scrollHeight;
+    },100)
   }
 }

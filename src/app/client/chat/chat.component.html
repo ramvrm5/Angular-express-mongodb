@@ -10,7 +10,6 @@
     <div fxFlex>
       <div fxLayout="column" fxLayoutAlign="space-between" class="chat-main">
         <div fxFlex fxLayout="column" id="chatContainer">
-            <!-- <app-message *ngFor="let message of messageList" [fromMessage]="message?.to_user === currentUser.id" [message]="message"></app-message> -->
           <div *ngFor="let message of messageList">
             <div [ngClass]="message.id === user.id ? 'right' : 'left'" > {{message.message}} </div>
           </div>
