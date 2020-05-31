@@ -22,7 +22,16 @@
   margin-right: 52px;
   margin-top: -15px
 }
-
+.beta-logo-mobile {
+  height: 20px;
+  width: 35px;
+  position: absolute;
+  z-index: 45;
+  z-index: 615px;
+  right: -35px;
+  margin-right: 80px;
+  margin-top: 0px
+}
 
 .header-logo {
   margin-top: 24px;

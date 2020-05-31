@@ -27,6 +27,7 @@
     </div>
   </div>
   <div fxLayout fxLayoutAlign="start center" *ngIf="isMobile">
+  <img src="../../../../assets/images/beta.png" alt="beta" class="beta-logo-mobile">
     <img src="../../../../assets/icons/menu-white.svg" height="24" class="menu-icon" (click)="openFooter()"
       *ngIf="theme == 'transparent'; else menuIconAlternate">
     <ng-template #menuIconAlternate>
@@ -62,20 +63,22 @@
         routerLinkActive="header-link-light-active">ABOUT US</button>
     </div>
     <div fxLayout fxLayoutGap="15px" style="padding-right: 15px">
+      
       <div><img src="../../../../assets/images/beta.png" alt="beta" class="beta-logo"></div>
     </div>
   </div>
   <div fxLayout fxLayoutAlign="start center" fxLayoutGap="128px" *ngIf="!isMobile && variant == 'counsellor'">
-    <div fxLayout fxLayoutGap="24px">
+    <!-- <div fxLayout fxLayoutGap="24px">
       <button mat-button class="header-link-light" routerLink="/counsellor/dashboard"
         routerLinkActive="header-link-light-active">DASHBOARD</button>
       <button mat-button class="header-link-light" routerLink="/counsellor/schedule"
         routerLinkActive="header-link-light-active">SCHEDULE</button>
     </div>
     <div fxLayout fxLayoutGap="15px" style="padding-right: 15px">
-    </div>
+    </div> -->
   </div>
   <div fxLayout fxLayoutAlign="start center" *ngIf="isMobile">
+  <img src="../../../../assets/images/beta.png" alt="beta" class="beta-logo-mobile">
     <img src="../../../../assets/icons/menu.svg" height="24" class="menu-icon" (click)="openFooter()">
   </div>
 </div>
@@ -107,12 +110,12 @@
       <button mat-button class="mobile-nav-link" routerLink="/about-us" routerLinkActive="mobile-nav-link-active">ABOUT
         US</button>
     </div>
-    <div fxLayout="column" *ngIf="variant === 'counsellor'">
+    <!-- <div fxLayout="column" *ngIf="variant === 'counsellor'">
       <button mat-button class="mobile-nav-link" routerLink="/counsellor/dashboard"
         routerLinkActive="mobile-nav-link-active">DASHBOARD</button>
       <button mat-button class="mobile-nav-link" routerLink="/counsellor/schedule"
         routerLinkActive="mobile-nav-link-active">SCHEDULE</button>
-    </div>
+    </div> -->
     <div fxFlex></div>
     <div fxLayout="column" fxLayoutGap="8px" style="padding-bottom: 18px">
     </div>
