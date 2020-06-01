@@ -1,5 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 import { SocketService } from 'src/app/core/services/socket/socket.service';
+import { CompileShallowModuleMetadata } from '@angular/compiler';
 
 @Component({
   selector: 'app-chat',
@@ -13,6 +14,7 @@ export class ChatComponent implements OnInit{
     "name": '',
     "id": 0,
     "message": '',
+    "type": ''
   }
   sessions =  ['Test'];
   messageList: any[] = [];
@@ -38,7 +40,12 @@ export class ChatComponent implements OnInit{
 
   socketConnection() {
     this.socketService.setupSocketConnection();
-    this.socketService.joinRoom(this.user.room);
+    this.socketService.joinRoom(this.user);
+    this.socketService.roomConfirmation().subscribe(user => {
+      user.message = `${user.name} has joined`;
+      user.type = 'JOIN';
+      this.messageList.push(user);
+    })
   }
 
   senMessageOnEnter(event) {

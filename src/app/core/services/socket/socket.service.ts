@@ -32,5 +32,15 @@ export class SocketService {
         });
     });
   }
+  
+  public roomConfirmation = () => {
+    return Observable.create((observer) => {
+        this.socket.on('room-joined', (message) => {
+            observer.next(message);
+        });
+    });
+  }
+
+
 
 }

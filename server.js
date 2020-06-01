@@ -19,8 +19,9 @@ res.sendFile(path.join(__dirname+'/dist/ventinghub/index.html'));
 io.on('connection', (socket) => {
     console.log('a user connected');
    
-    socket.on('room', (room) => {
-        socket.join(room);
+    socket.on('room', (user) => {
+        socket.join(user.room);
+        io.to(user.room).emit('room-joined', user);
     });
 
     socket.on('new-message', (user) => {

@@ -20,6 +20,9 @@
 
 .left {
   float: left;
+}
+
+.message {
   width: 250px;
   padding: 8px 0px 8px 10px;
   border-radius: 8px;
@@ -28,14 +31,17 @@
   margin-bottom: 10px;
 }
 
-.right {
-  float: right;
+.join {
   width: 250px;
-  padding: 8px 0px 8px 10px;
+  padding: 5px 0px 5px 10px;
   border-radius: 8px;
-  background: rgb(255,255,255);
+  font-size: 14px;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+.right {
+  float: right;
 }
 
 #message {
@@ -70,11 +76,13 @@
   box-shadow: 1px 1px 2px 2px #b6b6b6;
   position: absolute;
   left: 0;
-  top: 35%;
+  top: 40%;
   right: 0;
   margin: auto;
-  height: 280px;
+  height: 160px;
 }
+
+
 
 #accessCode {
   margin-top: 10px;
@@ -118,6 +126,7 @@
 
 :host ::ng-deep .mat-form-field {
   font-size: 18px;
+  text-align: center !important;
 }
 
 @media only screen and (min-width: 1200px) {

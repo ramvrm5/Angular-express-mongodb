@@ -1,5 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 import { SocketService } from 'src/app/core/services/socket/socket.service';
+import { CompileShallowModuleMetadata } from '@angular/compiler';
 
 @Component({
   selector: 'app-chat',
@@ -13,12 +14,13 @@ export class ChatComponent implements OnInit{
     "name": '',
     "id": 0,
     "message": '',
+    "type": ''
   }
   sessions =  ['Test'];
   messageList: any[] = [];
   accessCode;;
   showSession = true;
-  client;
+  client = ''
 
   constructor(
     private socketService: SocketService
@@ -30,14 +32,20 @@ export class ChatComponent implements OnInit{
     this.user.room = this.accessCode;
     this.user.id = Math.random();
     this.user.name = prompt('Enter username');
-    
     this.socketConnection();
     this.getMessages();
+    
+
   }
 
   socketConnection() {
     this.socketService.setupSocketConnection();
-    this.socketService.joinRoom(this.user.room);
+    this.socketService.joinRoom(this.user);
+    this.socketService.roomConfirmation().subscribe(user => {
+      user.message = `${user.name} has joined`;
+      user.type = 'JOIN';
+      this.messageList.push(user);
+    })
   }
 
   senMessageOnEnter(event) {
@@ -50,7 +58,7 @@ export class ChatComponent implements OnInit{
   sendMessage() {
       this.socketService.sendMessage(this.user);
       this.user.message = '';
-      this.scroll()
+      this.scroll()   
   }
 
   getMessages() {
@@ -60,8 +68,8 @@ export class ChatComponent implements OnInit{
         if(messages.id != this.user.id) {
           this.client = messages.name
         }
-        this.messageList.push(messages);
-        this.scroll();
+       this.messageList.push(messages);
+        this.scroll()
       });
   }
 

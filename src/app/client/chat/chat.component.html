@@ -11,7 +11,8 @@
       <div fxLayout="column" fxLayoutAlign="space-between" class="chat-main">
         <div fxFlex fxLayout="column" id="chatContainer">
           <div *ngFor="let message of messageList">
-            <div [ngClass]="message.id === user.id ? 'right' : 'left'" > {{message.message}} </div>
+            <div *ngIf="message.type === 'JOIN'" [ngClass]="message.id === user.id ? 'right join' : 'left join'" > {{message.message}} </div>
+            <div *ngIf="message.type !== 'JOIN'" [ngClass]="message.id === user.id ? 'right message' : 'left message'" > {{message.message}} </div>
           </div>
           </div>
         <div fxLayout fxLayoutGap="12px" class="send-message" fxLayoutAlign="start center">
@@ -31,17 +32,14 @@
 
 
 <div id="session-container" *ngIf="showSession && !user.room">
-  <p style="height: 60px">
+  <p style="height: 40px">
     Active Sessions
   </p>
-  <div *ngFor="let session of sessions">
-    <p style="font-size: 48px;">{{ session}}</p>
     <div>
 
       <mat-form-field id="accessCode" >
-        <input matInput placeholder="Enter Access Code"  [(ngModel)]="accessCode">
+        <input id="matInp" matInput placeholder="Enter Access Code"  [(ngModel)]="accessCode">
       </mat-form-field>
       <button mat-raised-button (click)="joinSession()"> Join Session</button>
     </div>
-  </div>
 </div>
