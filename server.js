@@ -6,15 +6,28 @@ const path = require('path');
 const app = express();
 const http = require('http').createServer(app);
 const io = require('socket.io')(http);
+const router = require('./routes');
+const mongoose = require('mongoose');
+const cors = require('cors');
+const MONGODB_URI ='mongodb://localhost:27017/srk_database';
+
 
 var port = (process.env.PORT || '3000');
 
 app.use(express.static(__dirname + '/dist/ventinghub'));
+app.use(express.json());
+app.use(cors());
+
+app.use(express.urlencoded({ extended: false }));
+
 
 app.get('/*', function(req,res) {
-    
-res.sendFile(path.join(__dirname+'/dist/ventinghub/index.html'));
+    res.sendFile(path.join(__dirname+'/dist/ventinghub/index.html'));
 });
+
+
+app.use('/', router)
+
 
 io.on('connection', (socket) => {
     console.log('a user connected');
@@ -33,7 +46,17 @@ io.on('connection', (socket) => {
     });
 });
 
-// Start the app by listening on the default Heroku port
-http.listen(port, () => {
-    console.log(`listening on ${port} `);
-});
+mongoose
+  .connect(MONGODB_URI, { useUnifiedTopology: true , useNewUrlParser: true})
+  .then(result => {
+      console.log('connected To Database...!!!');
+      http.listen(port, () => {
+        console.log(`listening on ${port} `);
+    });
+    
+  })
+  .catch(err => {
+    console.log(err);
+  });
+
+

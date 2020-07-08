@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {NavigationEnd, NavigationStart, Router} from '@angular/router';
 import {NgxSpinnerService} from 'ngx-spinner';
+declare var $: any;
 
 @Component({
   selector: 'app-booking',
@@ -10,6 +11,7 @@ import {NgxSpinnerService} from 'ngx-spinner';
 export class BookingComponent implements OnInit {
 
   variant = 'default';
+  
 
   constructor(
     private router: Router,
@@ -17,11 +19,40 @@ export class BookingComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    
+     
+      this.datePicker()
   }
 
   onBookNowClick() {
     this.router.navigate(['/client/book']);
+  }
+
+  datePicker() {
+    $(function () {
+      let bootstrapMaterialDatePickerOption = {
+        format: 'MM/DD/YYYY HH:mm',
+        shortTime: false,
+        minDate: new Date(),
+        //maxDate: null,
+        //currentDate: $now,
+        //disabledDays: [],
+        date: true,
+        time: true,
+        monthPicker: false,
+        year: true,
+        clearButton: false,
+        nowButton: false,
+        switchOnClick: true,
+        cancelText: 'Cancel',
+        //okText: 'VALIDER',
+        //clearText: 'EFFACER',
+        //nowText: 'MAINTENANT',
+        //triggerEvent: 'focus',
+        lang: 'en',
+        //weekStart: 1,
+      }; 
+      $('.myDatePicker').bootstrapMaterialDatePicker(bootstrapMaterialDatePickerOption);
+    });
   }
 
 }

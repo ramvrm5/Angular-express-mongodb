@@ -125,7 +125,7 @@
 }
 
 :host ::ng-deep .mat-form-field {
-  font-size: 18px;
+  font-size: 14px;
   text-align: center !important;
 }
 

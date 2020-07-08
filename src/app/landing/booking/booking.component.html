@@ -1,7 +1,15 @@
 <div fxLayout="column" style="min-height: 100%">
   <app-header [theme]="'light'" [showLogin]="false" [variant]="variant"></app-header>
-  <div fxLayout="column" fxLayoutAlign="center center" style="min-height: 100%;">
-    <iframe src="https://booking.appointy.com/VentingHub/?isGadget=1" id="booking" height="760px" width="760px" scrolling="auto" frameborder="0" allowtransparency="true"></iframe>
+  <div fxLayout="column"  style="min-height: 600px; ">
+    <!-- <iframe src="https://booking.appointy.com/VentingHub/?isGadget=1" id="booking" height="760px" width="760px" scrolling="auto" frameborder="0" allowtransparency="true"></iframe> -->
+    <div class="container">
+      <h2 class="text-center">Venting Hub Session</h2>
+      <h5 class="mt-4"><span class="p-2 bg-info rounded-circle text-white mr-2">VE</span> Venting Session <br> <small class=" minutes">45m</small></h5>
+     
+      <p class="mt-4">Vent and express yourself freely with us and learn the appropriate way to cope creatively with whatever situation you may be in.</p>
+      <hr>
+      <input type="text" placeholder="Book A Date" class="myDatePicker"  />
+    </div>
   </div>
   <app-footer></app-footer>
 </div>

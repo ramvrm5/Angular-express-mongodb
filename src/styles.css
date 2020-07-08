@@ -23,6 +23,22 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   margin-left: auto;
 }
 
+.dtp div.dtp-date {
+  background: #0EBABC !important;
+}
+
+.dtp > .dtp-content > .dtp-date-view > header.dtp-header {
+  background: #0b9192 !important;
+}
+
+.dtp .p10 > a {
+  color:#fff !important
+}
+
+.dtp table.dtp-picker-days tr > td > a.selected {
+  background-color: #0EBABC !important;
+}
+
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
