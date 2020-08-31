@@ -1,5 +1,5 @@
 .background-image {
-  background-image: url("../../../assets/images/background-home.jpeg");
+  background-image: url("/assets/images/background-home.jpeg");
   filter: brightness(45%) contrast(95%);
   margin-top: -130px;
   margin-left: -5px;

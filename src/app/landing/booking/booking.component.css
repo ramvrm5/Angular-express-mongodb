@@ -262,5 +262,10 @@ input {
   border: none;
   padding: 1em;
   border-radius: 5px;
+  color: white;
+  text-align: center;
 }
 
+.mt-14 {
+  margin-top: 14em;
+}

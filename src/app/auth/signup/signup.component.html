@@ -1,0 +1,81 @@
+<div fxLayout="column">
+  <app-header [theme]="'light'" [variant]="'client'"></app-header>
+  <div fxLayout="column" class="d-flex justify-content-center p-5">
+      <div class="login-container border shadow">
+        <div class="header text-center bg-info p-3">
+          <h2 class="text-white">Welcome</h2>
+          <p class="text-white">Please Signup Here</p>
+          <span class="logo">VE</span>
+        </div>
+        <div class="row mt-4 p-2">
+          <div class="col-12">
+            <form #SignupForm="ngForm" (ngSubmit)="onSubmit(SignupForm)">
+              <p class="text-danger small">{{error}}</p>
+              <div class="form-group mb-3">
+                <label for="username">username</label>
+                <input type="text" class="form-control" placeholder="Enter username" id="username" name="username" #username="ngModel" required  ngModel>
+                <p class="small text-info" *ngIf="username.invalid && (username.dirty || username.touched)">
+                  <span *ngIf="username.errors.required">
+                    Username is Required
+                  </span>
+                </p>
+              </div>
+              <div class="form-group mb-3">
+                <label for="email">Email</label>
+                <input type="text" class="form-control" placeholder="Enter Email" id="email" name="email" #email="ngModel" email required ngModel>
+                <p class="text-info small" *ngIf="email.invalid && (email.dirty || email.touched)">
+                  <span *ngIf="email.errors.required">
+                    Email is Required
+                  </span>
+                  <span *ngIf="email.errors.email">
+                    Please use an valid E-mail
+                  </span>
+                </p>
+              </div>
+              <div class="form-group mb-3">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" placeholder="Enter Password" id="pwd" name="password" minlength='8' #password="ngModel" required ngModel>
+                <p class="text-info small" *ngIf="password.invalid && (password.dirty || password.touched)">
+                  <span *ngIf="password.errors.required">
+                    Password is Required
+                  </span>
+                  <span *ngIf="password.errors.minlength">
+                    Please use an password Atleast 8 chars
+                  </span>
+                </p>
+              </div>
+              <div class="form-group mb-3">
+                <label for="phone">Phone</label>
+                <input type="tel" class="form-control" placeholder="Enter Phone" id="phone" name="phone"  #phone="ngModel"  required ngModel>
+                <p class="text-info small" *ngIf="phone.invalid && (phone.dirty || phone.touched)">
+                  <span *ngIf="phone.errors.required">
+                    phone is Required
+                  </span>
+<!--                   <span *ngIf="phone.errors.pattern">
+                    Please use an valid Phone Number of 10 chars
+                  </span> -->
+                </p>
+              </div>
+              <label for="kind">Who are you?</label><br>
+              <select id="kind" name="kind" class="custom-select" #kind="ngModel" required ngModel>
+                <option value="CLIENT" selected>Client</option>
+                <option value="COUNSELLOR">Counsellor</option>
+              </select>
+              <p class="text-info small" *ngIf="kind.invalid && (kind.dirty || kind.touched)">
+                <span *ngIf="kind.errors.required">
+                  Please choose your User Type
+                </span>
+                
+              </p>
+              <div class="form-group mt-2 mb-3">
+                <button class="btn btn-info" [disabled]="!SignupForm.valid" type="submit">Signup </button>
+              </div>
+            </form>
+
+            <p>Already Have an Account? <a [routerLink]="['/auth/login']">Signin Here</a></p>
+          </div>
+        </div>
+      </div>
+  </div>
+  <app-footer></app-footer>
+</div>

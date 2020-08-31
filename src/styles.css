@@ -39,6 +39,18 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   background-color: #0EBABC !important;
 }
 
+.dtp div.dtp-actual-year {
+  color:#fff !important;
+}
+
+.btn-info {
+  background-color: #0EBABC !important;
+}
+
+.bg-info {
+  background-color: #4FBBBC !important;
+}
+
 @media (min-width: 576px) {
   .container {
     max-width: 540px;

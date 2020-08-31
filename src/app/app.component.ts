@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {NgxSpinnerService} from 'ngx-spinner';
 import {NavigationEnd, NavigationStart, Router} from '@angular/router';
 import {Subscription} from 'rxjs';
+import { AuthLoginService } from './core/auth/authLogin.service';
+
 
 export let browserRefresh = false;
 @Component({
@@ -14,7 +16,8 @@ export class AppComponent implements OnInit {
   subscription : Subscription;
   constructor(
     private ngxSpinnerService: NgxSpinnerService,
-    private router: Router
+    private router: Router,
+    private authService: AuthLoginService
   ) {
 
     if (window.performance) {
@@ -26,6 +29,7 @@ export class AppComponent implements OnInit {
         console.info( "This page is not reloaded");
       }
 
+      this.authService.autoLogin();
   }
 
   ngOnInit() {

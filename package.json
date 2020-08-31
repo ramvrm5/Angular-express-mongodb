@@ -40,6 +40,7 @@
     "mongoose": "^5.9.22",
     "ngx-spinner": "^9.0.2",
     "node": "^14.3.0",
+    "nodemailer": "^6.4.10",
     "nodemon": "^2.0.4",
     "rxjs": "~6.5.4",
     "socket.io": "^2.3.0",

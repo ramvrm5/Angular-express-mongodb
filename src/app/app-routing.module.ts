@@ -11,7 +11,11 @@ const routes: Routes = [
   }, {
     path: 'counsellor',
     loadChildren: () => import('src/app/counsellor/counsellor.module').then( module => module.CounsellorModule)
+  }, {
+    path: 'auth',
+    loadChildren: () => import('src/app/auth/auth.module').then( module => module.AuthModule)
   }
+
 ];
 
 @NgModule({

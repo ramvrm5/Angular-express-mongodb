@@ -4,8 +4,7 @@
 
 export const environment = {
   production: false,
-  base_api_uri: 'http://localhost:8000/',
-  base_ws_uri: 'ws://localhost:8000/',
+  base_api_uri: 'http://localhost:3000/',
   socket_url: 'http://localhost:3000/',
 };
 

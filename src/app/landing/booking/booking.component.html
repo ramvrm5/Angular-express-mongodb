@@ -3,12 +3,30 @@
   <div fxLayout="column"  style="min-height: 600px; ">
     <!-- <iframe src="https://booking.appointy.com/VentingHub/?isGadget=1" id="booking" height="760px" width="760px" scrolling="auto" frameborder="0" allowtransparency="true"></iframe> -->
     <div class="container">
-      <h2 class="text-center">Venting Hub Session</h2>
+      <h2 class="text-center mt-4">Venting Hub Session</h2>
       <h5 class="mt-4"><span class="p-2 bg-info rounded-circle text-white mr-2">VE</span> Venting Session <br> <small class=" minutes">45m</small></h5>
      
-      <p class="mt-4">Vent and express yourself freely with us and learn the appropriate way to cope creatively with whatever situation you may be in.</p>
+      <p class="mt-4 ml-5">Vent and express yourself freely with us and learn the appropriate way to cope creatively with whatever situation you may be in.</p>
       <hr>
-      <input type="text" placeholder="Book A Date" class="myDatePicker"  />
+      <div *ngIf="user; else elseblock">
+        <input type="text" placeholder="Book A Date" class="myDatePicker" #datePicker />
+
+
+          <div class="row">
+            <div class="col-12 text-right">
+              <button class="btn btn-info mt-14" (click)="confirmBooking()">Confirm Booking</button>
+            </div>
+          </div>
+        
+      </div>
+      <ng-template #elseblock>
+        <div  class="row">
+          <div class="col-12">
+            <p>Please Logi first as a Client to Book Appointment with Counsellor</p>
+            <button class="btn btn-info mt-2" [routerLink]="['/auth/login']">Login</button>
+          </div>
+        </div>
+      </ng-template>
     </div>
   </div>
   <app-footer></app-footer>

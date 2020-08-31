@@ -1,0 +1,37 @@
+.container {
+  height: 600px;
+}
+
+.login-container {
+  width: 400px;
+  left: 0;
+    right: 0;
+    margin: auto;
+
+}
+
+.p-5 {
+  padding: 5em !important;
+}
+
+
+.logo {
+  border: 1px solid;
+  padding: 0.5em;
+  position: absolute;
+  margin-top: 4px;
+  border-radius: 50%;
+  background-color: #71706F;
+  color: #fff;
+  margin-left: -16px;
+}
+
+@media screen and (max-width:576px) {
+  .p-5 {
+    padding: 3em 10px !important;
+  }
+
+  .login-container {
+    width: 95% !important;
+  }
+}

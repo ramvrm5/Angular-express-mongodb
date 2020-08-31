@@ -9,7 +9,8 @@ const io = require('socket.io')(http);
 const router = require('./routes');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const MONGODB_URI ='mongodb://localhost:27017/srk_database';
+//const MONGODB_URI ='mongodb://localhost:27017/ventinghub';//localhost
+const MONGODB_URI ='mongodb+srv://ramverma:ram123456@traversymedia.77b2f.mongodb.net/ventinghub?retryWrites=true&w=majority';//Server
 
 
 var port = (process.env.PORT || '3000');
@@ -48,7 +49,7 @@ io.on('connection', (socket) => {
 
 mongoose
   .connect(MONGODB_URI, { useUnifiedTopology: true , useNewUrlParser: true})
-  .then(result => {
+    .then(result => {
       console.log('connected To Database...!!!');
       http.listen(port, () => {
         console.log(`listening on ${port} `);
